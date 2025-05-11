@@ -18,9 +18,9 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider craco start",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider craco build",
+    "test": "cross-env NODE_OPTIONS=--openssl-legacy-provider craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -40,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
